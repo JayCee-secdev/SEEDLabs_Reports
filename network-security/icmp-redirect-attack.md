@@ -10,7 +10,7 @@ To understand how the ICMP redirect message can be abused by an attacker to inte
     - Real Router: 10.9.0.1
     - Malicious Router (Attacker): 10.9.0.105
 
-##💡 Key Learning & Tips
+## **💡 Key Learning & Tips**
 ### The ICMP Redirect Concept: 
 ICMP redirect messages are normally used by routers to tell a host, "There is a better route to your destination." In this lab, the attacker sends a forged redirect message to the victim, claiming that the attacker's IP is the best gateway for a specific destination.
 ### The "Racing" Requirement: 
