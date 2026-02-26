@@ -21,7 +21,7 @@ Before starting any lab, I found these three habits saved me hours of debugging:
 
 1. **Snapshots are Life:** Always take a VM snapshot before running a kernel exploit (like Dirty COW).
 2. **Environment Isolation:** Use the provided Docker containers to ensure network configurations don't bleed into your host machine.
-3. **Hex is Truth:** When a payload doesn't work, don't guess—use `xxd` or `hexdump` to see what is actually happening in memory.
+3. **Hex is Truth:** When a payload doesn't work, don't guess, use `xxd` or `hexdump` to see what is actually happening in memory.
 
 ---
 
