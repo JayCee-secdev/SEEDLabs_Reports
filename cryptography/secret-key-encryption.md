@@ -14,11 +14,11 @@ To gain hands-on experience with various encryption algorithms, modes of operati
 - Programming for Crypto: When writing the brute-force C code using the OpenSSL library, the "gotcha" was ensuring the key was exactly 16 bytes. Since my wordlist had words shorter than 16 characters, I had to pad them with the # character (0x23 in hex) as per the lab requirements.
 
 ## **🔍 Troubleshooting Log**
-- | Issue Encountered | Root Cause | Solution/Observation |
-- | --- | --- | --- |
-- | Frequency analysis results messy | Newline characters and spaces were being counted. | Refined the script to focus only on alphabetic characters and convert everything to lowercase. |
-- | Brute-force script failing | Wordlist words had trailing \n characters. | Used a stripping function in C to remove the newline before calculating the hash and padding with #. |
-- | AES decryption error | Input ciphertext was not a multiple of 16 bytes. | Verified that the ciphertext was correctly parsed from hex to binary and that it aligned with the block size. |
+| Issue Encountered | Root Cause | Solution/Observation |
+| --- | --- | --- |
+| Frequency analysis results messy | Newline characters and spaces were being counted. | Refined the script to focus only on alphabetic characters and convert everything to lowercase. |
+| Brute-force script failing | Wordlist words had trailing \n characters. | Used a stripping function in C to remove the newline before calculating the hash and padding with #. |
+| AES decryption error | Input ciphertext was not a multiple of 16 bytes. | Verified that the ciphertext was correctly parsed from hex to binary and that it aligned with the block size. |
 
 ## **🏁 Summary of Defense**
 1. Entropy Matters: Brute-force attacks are only possible when the "keyspace" is small (e.g., using a common dictionary word as a key). Using truly random, high-entropy keys is non-negotiable.
