@@ -12,7 +12,7 @@ Each laboratory has its own dedicated documentation file containing specific env
 
 * **/docs/software-security/**: Buffer Overflow, Shellshock, Set-UID.
 * **/docs/network-security/**: TCP/IP Attacks, DNS, Firewalls.
-* **/docs/crypto/**: RSA, PKI, Hash Collisions.
+* **/docs/cryptography/**: Secret-Key Encryption.
 
 ---
 
