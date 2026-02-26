@@ -21,6 +21,6 @@ To gain hands-on experience with various encryption algorithms, modes of operati
 - | AES decryption error | Input ciphertext was not a multiple of 16 bytes. | Verified that the ciphertext was correctly parsed from hex to binary and that it aligned with the block size. |
 
 ## **🏁 Summary of Defense**
-1 - Entropy Matters: Brute-force attacks are only possible when the "keyspace" is small (e.g., using a common dictionary word as a key). Using truly random, high-entropy keys is non-negotiable.
-2 - Never Reuse IVs: Reusing an IV with the same key in CBC mode can leak information about the plaintext.
-3 - Library Usage: Always use established libraries like OpenSSL (evp.h) rather than trying to "roll your own" crypto functions, as the library handles complex padding and memory cleanup safely.
+1. Entropy Matters: Brute-force attacks are only possible when the "keyspace" is small (e.g., using a common dictionary word as a key). Using truly random, high-entropy keys is non-negotiable.
+2. Never Reuse IVs: Reusing an IV with the same key in CBC mode can leak information about the plaintext.
+3. Library Usage: Always use established libraries like OpenSSL (evp.h) rather than trying to "roll your own" crypto functions, as the library handles complex padding and memory cleanup safely.
